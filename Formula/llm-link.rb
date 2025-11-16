@@ -1,23 +1,23 @@
 class LlmLink < Formula
   desc "Universal LLM proxy exposing OpenAI/Ollama/Anthropic compatible endpoints"
   homepage "https://github.com/lipish/llm-link"
-  version "0.3.7"
+  version "0.3.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/lipish/llm-link/releases/download/v#{version}/llm-link-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "0e23b1d4e0c2edb5ac9bc43322713f1e9fb01a8560ed954100e54c293c0a30c9" # arm64
+      sha256 "2befe06c3a6fa331fa4b5424f1f2c4f6e9e2cd377191a8924d12667a759e6415" # arm64
     else
       url "https://github.com/lipish/llm-link/releases/download/v#{version}/llm-link-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "5b39a5e5b48009e3c9b2032458940be05210f9ee273a143b3d61136ca1d7e4fd" # intel
+      sha256 "39f92795c8483fe5bb313eceb98dd2524445d95be6dae2a9add91a904ecaeca8" # intel
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/lipish/llm-link/releases/download/v#{version}/llm-link-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "8ee440db010875fcf2cfea21c17375a73708c5f12bf817ccc56344a9a25075ef" # linux
+      sha256 "8e2883058aeb00e869a45afb657d19340ac8b1eb8625a372817896bcb99ff4c3" # linux
     end
   end
 
